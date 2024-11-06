@@ -1,13 +1,14 @@
+import os
 import functions_framework
 
 import twilio
 
 from twilio.rest import Client
 
-TWILIO_ACCOUNT_SID = 'AC098...'  # update with Twilio account sid
-TWILIO_AUTH_TOKEN = '6cafda...'  # update with Twilio auth token
+TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')  # get Twilio account sid from environment variable
+TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')  # get Twilio auth token from environment variable
 TWILIO_NUMBER = '+15005550006'  # This is your test number which will not send SMS
-TO_NUMBERS = ['+14123131272']  # any valid cell phone
+TO_NUMBERS = ['+14125551234']  # any valid cell phone
 
 
 # Triggered by a change in a storage bucket
